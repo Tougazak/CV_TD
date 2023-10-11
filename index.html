@@ -1,6 +1,5 @@
 ﻿<!DOCTYPE html>
 <html lang="fr">
-<html>
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV de THIBAUT DAUPRAT, de la préparation physique à la cybersécurité</title>
@@ -34,6 +33,35 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+        /* Centre tout le contenu dans le conteneur */
+        .image-container {
+            text-align: center;
+        }
+
+        /* Utilise un affichage flexible pour aligner les images sur la même ligne */
+        .image-row {
+            display: flex;
+            /* Répartit l'espace entre les images de manière égale */
+            justify-content: space-between;
+        }
+
+        /* Style des paires image + légende */
+        .image-item {
+            text-align: center;
+        }
+
+         /* Ajuste la largeur des images, du coup à ne pas mettre dans la déclaration */
+         .image-item img {
+                width: 200px;
+         }
+
+        /* Style des légendes */
+        .image-caption {
+            font-size: 12px;
+            /* Ajoute un espace entre l'image et la légende */
+            margin-top: 5px;
+        }
+
 
         h1 {
             font-size: 28px;
@@ -180,16 +208,37 @@
         </ul>
     </div>
     <div class="container">
-        <h2>HOBBIES</h2>
+        <h2>HOBBIES & CENTRE D'INTERET</h2>
         <ul>
             <li>Gaming</li>
-            <li>Ancien rugbyman (durant 18 ans)</li>
+            <li>Rugby</li>
             <li>Bras de fer Sportif et sports de force</li>
             <li>Balade dans milieux naturels</li>
+            <li>Chiens</li>
         </ul>
-        <img src="gaming.jpg" alt="Logo Informations" width="100" style="float: right;">
-        <!-- Mettre les logos avec le nom dessous -->
 
+        <!-- Crée un conteneur pour les images et les légendes -->
+        <div class="image-container">
+            <!-- Crée une rangée (ligne) pour les images -->
+            <div class="image-row">
+                <!-- Div pour chaque paire image + légende -->
+                <div class="image-item">
+                    <!-- Insère la première image -->
+                    <img src="gaming.png" alt="Logo Informations">
+                    <!-- Ajoute une légende sous la première image -->
+                    <p class="image-caption">Gaming</p> <!-- Format image 875x701 -->
+                </div>
+                <div class="image-item">
+                    <img src="rugby.png" alt="Logo Informations">
+                    <p class="image-caption">Rugby</p>
+                </div>
+                <div class="image-item">
+                    <img src="FHB.png" alt="Logo Informations">
+                    <p class="image-caption">Bras de fer <br> sportif</p>
+                </div>
+            </div>
+        </div>
+        
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
