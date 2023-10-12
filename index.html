@@ -33,48 +33,19 @@
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
-        /* Centre tout le contenu dans le conteneur */
-        .image-container {
-            text-align: center;
-        }
 
-        /* Utilise un affichage flexible pour aligner les images sur la même ligne */
-        .image-row {
-            display: flex;
-            /* Répartit l'espace entre les images de manière égale */
-            justify-content: space-between;
-        }
-
-        /* Style des paires image + légende */
-        .image-item {
-            text-align: center;
-        }
-
-         /* Ajuste la largeur des images, du coup à ne pas mettre dans la déclaration */
-         .image-item img {
-                width: 200px;
-         }
-
-        /* Style des légendes */
-        .image-caption {
-            font-size: 12px;
-            /* Ajoute un espace entre l'image et la légende */
-            margin-top: 5px;
-        }
-
-
-        h1 {
-            font-size: 28px;
-            text-decoration: underline;
-            font-family: 'Spartan', sans-serif;
-            font-size: 16px;
-        }
+            .container.header-container h1 {
+                font-size: 28px;
+                text-decoration: underline;
+                font-family: 'Spartan', sans-serif;
+                font-size: 16px;
+            }
 
         h2 {
             font-size: 24px;
             margin-top: 20px;
             text-align: center;
-            font-weight: bold; /* Gras */
+            font-weight: bold;
         }
 
         h3 {
@@ -85,7 +56,7 @@
         h4 {
             font-size: 18px;
             margin-top: 10px;
-            font-weight: bold; /* Gras */
+            font-weight: bold;
         }
 
         p {
@@ -96,6 +67,28 @@
         ul {
             list-style-type: disc;
             margin-left: 20px;
+        }
+
+        .image-container {
+            text-align: center;
+        }
+
+        .image-row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .image-item {
+            text-align: center;
+        }
+
+            .image-item img {
+                width: 200px;
+            }
+
+        .image-caption {
+            font-size: 12px;
+            margin-top: 5px;
         }
 
         @media screen and (max-width: 600px) {
@@ -114,60 +107,47 @@
             h4 {
                 font-size: 16px;
             }
+
             .image-row {
                 display: flex;
                 flex-direction: column;
-                /* Ajuster le centrage pour les images alignées à gauche */
                 align-items: center;
             }
 
             .image-item {
-                /* Réinitialiser la largeur des images pour les faire occuper toute la largeur */
                 width: 100%;
             }
         }
     </style>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 </head>
 <body>
-
     <header>
-        <div class="container">
+        <div class="container header-container">
             <h1>THIBAUT</h1>
             <h2>TECHNICIEN SUPÉRIEUR SOLUTIONS LOGICIELS EN ALTERNANCE</h2>
             <h3><i>2 SEMAINES EN ENTREPRISE, 2 SEMAINES EN FORMATION</i></h3>
         </div>
     </header>
 
-
-
-
     <div class="container">
         <h2>PROFIL PERSONNEL</h2>
-        <p>
-            Féru d'informatique et souhaitant travailler dans un domaine porteur d'emploi, j'aime relever des défis et
-            mettre mes compétences au service de mon employeur.
-        </p>
+        <p><center>
+            Féru d'informatique et souhaitant travailler dans un domaine porteur d'emploi, j'aime relever des défis et mettre mes compétences au service de mon employeur.
+        </center></p>
 
-        <!-- Crée un conteneur pour les images et les légendes -->
         <div class="image-container">
-            <!-- Crée une rangée (ligne) pour les images -->
             <div class="image-row">
-                <!-- Div pour chaque paire image + légende -->
                 <div class="image-item">
-                    <!-- Insère la première image -->
-                    <img src="psc1.png" alt="Logo Informations">
-                    <!-- Ajoute une légende sous la première image -->
-                    <p class="image-caption">Psc1 à jour</p> <!-- Format image 875x701 -->
+                    <img src="psc1.png" alt="Psc1 à jour">
+                    <p class="image-caption">Psc1 à jour</p>
                 </div>
                 <div class="image-item">
-                    <img src="voiture.png" alt="Logo Informations">
-                    <p class="image-caption">Permis B <br> Véhiculé</p>
+                    <img src="voiture.png" alt="Permis B Véhiculé">
+                    <p class="image-caption">Permis B<br>Véhiculé</p>
                 </div>
             </div>
         </div>
     </div>
-
     <div class="container">
         <h2>FORMATIONS</h2>
 
@@ -234,14 +214,7 @@
     </div>
     <div class="container">
         <h2>HOBBIES & CENTRE D'INTERET</h2>
-        <ul>
-            <li>Gaming</li>
-            <li>Rugby</li>
-            <li>Bras de fer Sportif et sports de force</li>
-            <li>Balade dans milieux naturels</li>
-            <li>Chiens</li>
-        </ul>
-
+        <br>
         <!-- Crée un conteneur pour les images et les légendes -->
         <div class="image-container">
             <!-- Crée une rangée (ligne) pour les images -->
@@ -261,9 +234,13 @@
                     <img src="FHB.png" alt="Logo Informations">
                     <p class="image-caption">Bras de fer <br> sportif</p>
                 </div>
+                <div class="image-item">
+                    <img src="chien.png" alt="Logo Informations">
+                    <p class="image-caption">Passionné de chiens</p>
+                </div>
             </div>
         </div>
-        
+
 
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
